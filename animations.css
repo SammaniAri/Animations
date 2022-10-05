@@ -1,0 +1,80 @@
+.box {
+  background-color: magenta;
+  transition: background-color 1s;
+
+  width: 100px;
+  height: 100px;
+}
+.box:hover {
+  background-color: blue;
+}
+.box-active {
+  width: 200px;
+  height: 200px;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border-radius: 50%;
+  transition: transform 1s;
+}
+
+.circle:hover {
+  transform: translateX(50px);
+}
+
+.weirdShape {
+  width: 100px;
+  height: 100px;
+  background-color: greenyellow;
+  border-radius: 25%;
+  animation: myAnimation 1s;
+}
+
+.figure {
+  width: 100px;
+  height: 100px;
+  background-color: maroon;
+}
+.figure-animated {
+  animation: wobble;
+  animation-duration: 5s;
+}
+
+.cuteAnimation {
+  color: black;
+  font-size: 20px;
+
+  display: inline-block;
+
+  margin: 0 0.5rem;
+  animation: wobble; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+@keyframes myAnimation {
+  0% {
+    background-color: black;
+  }
+  50% {
+    transform: Translate(25%);
+  }
+  75% {
+    transform: Translate(-25%);
+  }
+  100% {
+    transform: Translate(0);
+  }
+
+  /*  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: green;
+  }
+  100% {
+    background-color: blue;
+  } */
+}
